@@ -26,7 +26,10 @@
 
   --fonte: "Manrope", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
 
-  /* Movimento */
+
+
+
+  
   --transicao: 0.2s ease;
 
   color-scheme: dark; }
@@ -218,9 +221,6 @@ input:focus {
 }
 
 
-/* ==========================================================================
-   6. BOTÕES
-   ========================================================================== */
 
 button {
   display: inline-flex;
@@ -270,7 +270,7 @@ button:disabled {
   transform: none;
 }
 
-/* "Adicionar": pílula translúcida com ícone circular, como o "Discover more" */
+
 button[type="submit"]::before {
   content: "+";
   content: "+" / "";
@@ -288,7 +288,7 @@ button[type="submit"]::before {
   border-radius: 50%;
 }
 
-/* Botão principal: verde-limão sólido */
+
 button.primario {
   color: var(--verde-escuro);
   background: var(--limao);
@@ -300,7 +300,9 @@ button.primario:hover {
   box-shadow: 0 14px 36px -10px rgba(166, 255, 125, 0.85);
 }
 
-/* "Remover": contorno fino, como o "Contact us" */
+
+
+
 button.remover {
   min-height: 0;
   padding: 9px 18px;
@@ -317,18 +319,14 @@ button.remover:hover {
 }
 
 
-/* ==========================================================================
-   7. LISTA DE APARELHOS
-   ========================================================================== */
-
 #lista-aparelhos {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin: 0;
   padding: 0;
-  list-style: none;
-}
+  list-style: none;}
+
 
 #lista-aparelhos li {
   display: grid;
@@ -341,26 +339,24 @@ button.remover:hover {
   border: 1px solid var(--borda);
   border-radius: 20px;
 
-  transition: border-color var(--transicao), background var(--transicao);
-}
+  transition: border-color var(--transicao), background var(--transicao);}
 
 #lista-aparelhos li:hover {
   background: rgba(10, 36, 30, 0.65);
-  border-color: rgba(166, 255, 125, 0.4);
-}
+  border-color: rgba(166, 255, 125, 0.4);}
+
 
 #lista-aparelhos .nome {
   font-size: 1.05rem;
   font-weight: 700;
-  overflow-wrap: anywhere;
-}
+  overflow-wrap: anywhere;}
+
 
 #lista-aparelhos .meta {
   font-size: 0.9rem;
-  color: var(--texto-suave);
-}
+  color: var(--texto-suave);}
 
-/* Mensagem de lista vazia */
+
 #lista-aparelhos li.vazio {
   display: block;
   padding: 28px 18px;
@@ -374,21 +370,15 @@ button.remover:hover {
 
 #lista-aparelhos li.vazio:hover {
   background: transparent;
-  border-color: var(--borda);
-}
+  border-color: var(--borda);}
 
-
-/* ==========================================================================
-   8. AÇÕES E MENSAGEM DE ERRO
-   ========================================================================== */
 
 .acoes {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 16px 20px;
-  margin-top: 24px;
-}
+  margin-top: 24px;}
 
 .erro {
   flex: 1 1 260px;
@@ -399,39 +389,27 @@ button.remover:hover {
   font-weight: 500;
   color: var(--erro);
 
-  background: rgba(255, 120, 100, 0.1);
-  border: 1px solid rgba(255, 180, 166, 0.35);
+  background: rgba(212, 38, 11, 0.1);
+  border: 1px solid rgba(194, 37, 9, 0.35);
   border-radius: var(--raio-campo);
 }
 
 
-/* ==========================================================================
-   9. RESULTADO DA SIMULAÇÃO
-   ========================================================================== */
-
 #resultado {
   background: linear-gradient(160deg, rgba(166, 255, 125, 0.1), rgba(255, 255, 255, 0.04) 45%);
-  border-color: rgba(166, 255, 125, 0.3);
-}
+  border-color: rgba(166, 255, 125, 0.3); }
 
 #resultado:not([hidden]) {
-  animation: subir 0.5s ease both;
-}
+  animation: subir 0.5s ease both;}
 
 @keyframes subir {
   from {
     opacity: 0;
-    transform: translateY(16px);
-  }
+    transform: translateY(16px);}
 
   to {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* ----- 9.1 Conta (linhas de valores) ----- */
+    transform: translateY(0);}}
 
 .conta {
   display: flex;
@@ -446,48 +424,42 @@ button.remover:hover {
   gap: 16px;
   padding: 14px 0;
 
-  border-bottom: 1px solid var(--borda);
-}
+  border-bottom: 1px solid var(--borda);}
 
 .linha span {
-  color: var(--texto-suave);
-}
+  color: var(--texto-suave);}
 
 .linha strong {
   font-weight: 600;
   font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
+  white-space: nowrap;}
 
 .linha.total {
   padding: 24px 0 4px;
-  border-bottom: 0;
-}
+  border-bottom: 0;}
 
 .linha.total span {
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--branco);
-}
+  color: var(--branco);}
 
-.linha.total strong {
+
+
+  .linha.total strong {
   font-size: clamp(1.8rem, 5vw, 2.75rem);
   font-weight: 300;
   letter-spacing: -0.02em;
-  color: var(--limao);
-}
+  color: var(--limao);}
 
 
-/* ----- 9.2 Resumo (painéis solares e aparelho mais caro) ----- */
 
 .resumo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
-  margin-bottom: 28px;
-}
+  margin-bottom: 28px;}
 
 .resumo > div {
   display: flex;
@@ -497,30 +469,30 @@ button.remover:hover {
 
   background: rgba(10, 36, 30, 0.45);
   border: 1px solid var(--borda);
-  border-radius: var(--raio-bloco);
-}
+  border-radius: var(--raio-bloco);}
 
 .resumo small {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--texto-suave);
-}
+  color: var(--texto-suave);}
+
+
 
 .resumo strong {
   font-size: 1.35rem;
   font-weight: 600;
   line-height: 1.25;
-  overflow-wrap: anywhere;
-}
+  overflow-wrap: anywhere;}
+
+
 
 .resumo > div:first-child strong {
   font-size: clamp(2.75rem, 7vw, 4rem);
   font-weight: 300;
   line-height: 1;
-  color: var(--limao);
-}
+  color: var(--limao);}
 
 
 .tabela {
@@ -528,14 +500,12 @@ button.remover:hover {
 
   background: rgba(10, 36, 30, 0.35);
   border: 1px solid var(--borda);
-  border-radius: var(--raio-bloco);
-}
+  border-radius: var(--raio-bloco);}
 
 table {
   width: 100%;
   min-width: 480px;
-  border-collapse: collapse;
-}
+  border-collapse: collapse;}
 
 th {
   padding: 16px 20px;
@@ -548,89 +518,60 @@ th {
   color: var(--texto-suave);
 
   background: rgba(255, 255, 255, 0.04);
-  border-bottom: 1px solid var(--borda);
-}
+  border-bottom: 1px solid var(--borda);}
 
 td {
   padding: 14px 20px;
 
   font-variant-numeric: tabular-nums;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);}
 
 td:first-child {
-  font-weight: 600;
-}
+  font-weight: 600;}
 
 tbody tr {
-  transition: background var(--transicao);
-}
+  transition: background var(--transicao);}
 
 tbody tr:hover {
-  background: rgba(166, 255, 125, 0.07);
-}
+  background: rgba(166, 255, 125, 0.07);}
 
-tbody tr:last-child td {
+
+
+  tbody tr:last-child td {
   border-bottom: 0;
 }
 
 th.n,
 td.n {
-  text-align: right;
-}
+  text-align: right;}
 
-
-/* ==========================================================================
-   10. RESPONSIVO
-   ========================================================================== */
 
 @media (max-width: 640px) {
   header::before {
     top: 0;
-    right: 0;
-  }
+    right: 0; }
 
   header::after {
     width: 62%;
-    opacity: 0.45;
-  }
+    opacity: 0.45;}
 
   h1 {
-    max-width: none;
-  }
+    max-width: none;}
 
   button[type="submit"],
   button.primario {
-    width: 100%;
-  }
+    width: 100%;}
 
   #lista-aparelhos li {
-    grid-template-columns: 1fr auto;
-  }
+    grid-template-columns: 1fr auto;}
 
   #lista-aparelhos .meta {
     grid-column: 1 / -1;
-    grid-row: 2;
-  }
+    grid-row: 2;}
 
   .resumo > div,
   th,
   td {
     padding-left: 16px;
     padding-right: 16px;
-  }
-}
-
-
-/* ==========================================================================
-   11. ACESSIBILIDADE — MOVIMENTO REDUZIDO
-   ========================================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-  }
-}
+  }}
